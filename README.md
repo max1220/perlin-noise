@@ -1,3 +1,11 @@
+# This repository:
+This repository contains a simple Makefile and a Lua FFI binding
+for the provided noise functions, and compiled libraries.
+
+[Original Repo](https://github.com/stegu/perlin-noise)
+
+
+# Original README:
 # perlin-noise
 Various versions of Perlin noise
 
