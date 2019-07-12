@@ -1,9 +1,12 @@
 #CFLAGS = -shared -lm -O2 -fPIC -std=c99 -Wall -Wextra -Wpedantic
 CFLAGS = -shared -lm -O3 -fPIC -std=c99 -Wall -Wextra -Wpedantic -march=native -mtune=native
 src = $(wildcard src/*.c)
-obj = $(src:.c=.o)
+libs = $(src:.c=.so)
 
-all: $(obj)
+%.so: %.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+all: $(libs)
 
 clean:
-	rm -f $(obj)
+	rm -f $(libs)
